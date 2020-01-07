@@ -68,15 +68,15 @@ public  boolean searchMatrix(int[][] matrix, int target) {
 
 ![3 by 10 Matrix](3-by-10-matrix.PNG?raw=true "3 by 10 Matrix")
 
-Lets search for number `1` in the above matrix which have 3 rows and 10 columns.
+**Lets search for number `1` in the above matrix which have 3 rows and 10 columns**
 
 We will compare `1 with 100` `1 with 90` `1 with 80` `1 with 70` `1 with 60` `1 with 50` `1 with 40` `1 with 30` `1 with 20` `1 with 10`. Finally we will exit out of while loop and return false because we didn't find `1` in above matrix. In this case while loop executed `10` times, which is equal to number of columns.
 
-Now lets search for number `21` in the above matrix.
+**Now lets search for number `21` in the above matrix**
 
 We will compare `21 with 100` `21 with 90` `21 with 80` `21 with 70` `21 with 60` `21 with 50` `21 with 40` `21 with 30` `21 with 20` `21 with 25` `21 with 15` `21 with 20`. Finally we will exit out of while loop and return false because we didn't find `21` in above matrix. In this case while loop executed `12` times, which is equal to (number of rows + number of column - 1)
 
-So the time complexity of above implementation will be O(m + n) and space complexity will be O(1), where m is the number of rows in te input matrix and n is the number of columns in the input matrix.
+So the time complexity of above implementation will be O(m + n) because while loop will never execute more than (m + n) times (regardless of whether target number exists in the matrix or not) and space complexity will be O(1), where m is the number of rows in the input matrix and n is the number of columns in the input matrix.
 
 ```
 Runtime Complexity = O(m + n)
