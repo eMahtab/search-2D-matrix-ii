@@ -38,12 +38,31 @@ So  initially `row = 0` and `column = matrix[0].length - 1` . Now there can be 3
 
 3. It means target number is equal to `matrix[row][column]` so we return true
 
-We keep comparing the target number with `matrix[row][column]` in the while loop as long as `row <= matrix.length` and `column >= 0`
+We keep comparing the target number with `matrix[row][column]` in the while loop as long as `row < matrix.length` and `column >= 0`
 
 After the end of while loop we return false, which will only be executed if we never found the number in the 2D grid.
 
 ## Implementation :
 
+```java
+public  boolean searchMatrix(int[][] matrix, int target) {
+    if(matrix == null || matrix.length == 0)
+        return false;
+
+      int row = 0;
+      int column = matrix[0].length - 1;
+
+      while(row < matrix.length && column >= 0){
+        if(matrix[row][column] > target)
+          column--; 
+        else if (matrix[row][column] < target)
+          row++;
+        else 
+          return true;    
+      }
+      return false;
+ }
+```
 
 ## References :
 https://www.youtube.com/watch?v=Ohke9-qwAKU
