@@ -66,8 +66,12 @@ public  boolean searchMatrix(int[][] matrix, int target) {
 
 ## Time and Space Complexity
 
+![3 by 10 Matrix](3-by-10-matrix.PNG?raw=true "3 by 10 Matrix")
 
-Above implementation have
+Lets search for number `1` in the above matrix which have 3 rows and 10 columns.
+We will compare `1 with 100` `1 with 90` `1 with 80` `1 with 70` `1 with 60` `1 with 50` `1 with 40` `1 with 30` `1 with 20` `1 with 10`. Finally we will exit out of while loop and return false because we didn't find `1` in above matrix. In this case while loop executed `10` times (which is equal to number of columns)
+
+
 
 ## References :
 https://www.youtube.com/watch?v=Ohke9-qwAKU
