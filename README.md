@@ -38,6 +38,9 @@ So  initially `row = 0` and `column = matrix[0].length - 1` . Now there can be 3
 
 3. It means target number is equal to `matrix[row][column]` so we return true
 
+We keep comparing the target number with `matrix[row][column]` in the while loop as long as `row <= matrix.length` and `column >= 0`
+
+After the end of while loop we return false, which will only be executed if we never found the number in the 2D grid.
 
 ## Implementation :
 
