@@ -25,6 +25,7 @@ Given target = 20, return false.
 
 ## Approach :
 
+![Search 2D Matrix sorted row and column wise](search-2D-grid.PNG?raw=true "Search 2D Matrix sorted row and column wise")
 
 ## Implementation :
 
