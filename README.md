@@ -24,12 +24,19 @@ Given target = 20, return false.
 ```
 
 ## Approach :
+What we are given in the question, the input matrix is sorted in ascending order both row wise and column wise.
 
 ![Search 2D Matrix sorted row and column wise](search-2D-grid.PNG?raw=true "Search 2D Matrix sorted row and column wise")
+The idea is to start the search from top-right corner of the 2D matrix.
+We start from first row and last column, and compare it with target number. 
+So  initially `row = 0` and `column = matrix[0].length - 1` . Now there can be 3 possibilities :
+1. target number is less than the matrix[row][column], it means target number will definitely not lie in that column (because we are given in the question that, `matrix[row+1][column]` will be greater than `matrix[row][column]`, so no need to search in that entire column and we can skip that entire column. So we decrement the value of column `column--`) 
+2.
+3.
 
 ## Implementation :
 
 
 ## References :
-
+https://www.youtube.com/watch?v=Ohke9-qwAKU
 
