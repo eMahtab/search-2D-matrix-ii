@@ -22,6 +22,37 @@ Consider the following matrix:
 Given target = 5, return true.
 Given target = 20, return false.
 ```
+# Implementation : Naive
+```java
+class Solution {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        if(matrix == null || matrix.length == 0)
+            return false;
+        int rows = matrix.length;
+        for(int i = 0; i < rows; i++) {
+            if(binarySearch(matrix[i], target))
+                return true;
+        }
+        return false;
+    }
+    
+    private boolean binarySearch(int[] arr, int target) {
+        int left = 0;
+        int right = arr.length - 1;
+        while(left <= right) {
+            int mid = (left + right) / 2;
+            if(target < arr[mid])
+                right = mid - 1;
+            else if(target > arr[mid])
+                left = mid + 1;
+            else
+                return true;
+        }
+        return false;
+    }
+}
+```
+
 
 ## Approach :
 We are given in the question that, the input matrix is sorted in ascending order both row wise and column wise.
